@@ -104,3 +104,7 @@ delete_path(G(V, E), path):
             delete v in child.father
         delete v in V
 ```
+
+## Author
+
+Zhongyu Chen
