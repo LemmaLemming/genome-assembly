@@ -1,3 +1,52 @@
+# genome-assembly
+
+Assemble genomes with de Bruijn graph.
+
+## Data
+
+* 4 datasets are provided (`data4` are much larger), unzip them:
+
+```
+unzip data1.zip
+unzip data2.zip
+unzip data3.zip
+unzip data4.zip
+```
+
+## Usage
+
+* Set a much higher recursion limit as it reaches deep recursion depth running DFS(depth first search) in de Bruijn graph. Set a new recursion limit in python using:
+
+```python
+import sys
+sys.setrecursionlimit(100000)
+```
+
+* As `data4` is much larger than the others, the normal stack size is not likely to be enough. Set a much higher stack size by the following command (only for Linux):
+
+```
+ulimit -s 8192000
+```
+
+* Build de Bruijn gragh and output assembled genomes by:
+
+```
+python main.py data1
+python main.py data2
+python main.py data3
+python main.py data4
+```
+
+## Result
+
+![data1](pic/data1.png)
+![data2](pic/data2.png)
+![data3](pic/data3.png)
+![data4](pic/data4.png)
+
+## Implementation
+
+Check `report.pdf` for details.
 
 ## data1
 
@@ -113,14 +162,5 @@ delete_path(G(V, E), path):
       	for child in v.children:
             delete v in child.father
         delete v in V
-```
-
-```python
-import sys
-sys.setrecursionlimit(100000)
-```
-
-```
-ulimit -s 8192000
 ```
 
