@@ -2,6 +2,10 @@
 
 Assemble genomes with de Bruijn graph.
 
+## Handout
+
+[算法设计Project：宏基因组组装](http://datamining-iip.fudan.edu.cn/ppts/algo/PJ2018/index.html)
+
 ## Data
 
 * 4 datasets are provided (`data4` are much larger), unzip them.
